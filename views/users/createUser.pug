@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+
+    div.content
+        div.form-header Create a User
+        div
+            form(action='/createUser' method="post")
+                div.input-form-row
+                    div.input-containter
+                        label(for="user_name").form-label User Name
+                        input(type="text" name="user_name" id="user_name" required=true).form-control
+                    div.input-containter.wide
+                        label(for="email").form-label Email
+                        input(type="text" name="email" id="email" required=true)
+                        div.helper-text This is how you will log in
+                    div.input-containter
+                        label(for="password").form-label Password
+                        input(type="text" name="password" id="password" required=true)
+                        div.helper-text Must be 8-20 characters long
+                    div.input-container
+                        label(for="role").form-label Role
+                        select(id="role" name="role")
+                            each role in roles
+                                option(value=role.id) #{role.role_name}
+                    button.button.primary(type="submit") Create
