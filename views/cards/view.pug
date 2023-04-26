@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    div.container
+        div.content
+            div.card-name-row
+                h2.card-name=card.card_name
+            div.card-type-row
+                h2.card-type=card.type
+            div.output-row
+                h2.card-output-min=card.output_min
+                h2.card-output-max=card.output_max
+            div.dice-info-row
+                h2.card-dices=card.dices
+                h2.card-die_min=card.die_min
+                h2.card-die_max=card.die_max

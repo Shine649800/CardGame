@@ -1,0 +1,27 @@
+mixin cardForm(card, buttonText, saveUrl, cancelUrl, deleteUrl)
+    form(action=saveUrl method="post")
+        div.input-container.wide
+            label(for="card_name").form-label Card Name
+            input(type="text" name="card_name" id="card_name" required=true placeholder="Name of the Card" value=card.card_name)
+        div.input-container.wide
+            label(for="type").form-label Card Type
+            input(type="text" name="type" id="type" required=true placeholder="Type of Card" value=card.type)
+        div.input-container.wide
+            label(for="output_min").form-label Card's Minimum Output
+            input(type="number" name="output_min" id="output_min" required=true placeholder=0 value=card.output_min)
+        div.input-container.wide
+            label(for="output_max").form-label Card's Maximum Output
+            input(type="number" name="output_max" id="output_max" required=true placeholder=1 value=card.output_max)
+        div.input-container.wide
+            label(for="dices").form-label Amount of Die
+            input(type="number" name="dices" id="dices" required=true placeholder=1 value=card.dices)
+        div.input-container.wide
+            label(for="die_min").form-label Die's Minimum Output
+            input(type="number" name="die_min" id="die_min" required=true placeholder=0 value=card.die_min)
+        div.input-container.wide
+            label(for="die_max").form-label Die's Maximum Output
+            input(type="number" name="die_max" id="die_max" required=true placeholder=1 value=card.die_max)
+        a.button(href=cancelUrl) Cancel
+        if(deleteUrl)
+            a.button(href=deleteUrl) Delete
+        button.button.primary(type="submit") #{buttonText}

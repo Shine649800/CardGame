@@ -1,0 +1,6 @@
+extends ../layout
+
+block content
+    include ../mixins/cardForm
+    div.content
+        +cardForm(card, 'Create', '/card/add', '/', null)
