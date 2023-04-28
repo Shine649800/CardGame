@@ -235,3 +235,57 @@ nav h3 {
 nav {
   padding: 0 32px;
 }
+.card-list{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card{
+  border:8px solid #720d0d;
+  border-radius: 12px;
+  width: 200px;
+  height: 300px;
+  max-width: 200px;
+  max-height: 300px;
+  font-size: 15px;
+  background-color: #da922b;
+  font-weight: bold;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+.line {
+  background-color: #720d0d;
+  margin-top: 10px;
+  width: 200px;
+  height:4px;
+}
+.clash-info {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.dice-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 12px;
+}
+
+.dices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 12px;
+}

@@ -5,13 +5,17 @@ const cardController = require('../controllers/cardController');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.redirect('/card');
 });
 
 router.get('/card/add', cardController.renderAddForm);
 router.post('/card/add', cardController.addCard);
 
 router.get('/card/:cardId', cardController.displayCard);
+router.get('/card', cardController.displayAll);
+
+router.get('/card/:cardId/edit', cardController.renderEditForm);
+router.post('/card/:cardId/edit', cardController.updateCard);
 
 router.get('/createUser', userController.renderUserCreationForm);
 router.post('/createUser', userController.createUser);

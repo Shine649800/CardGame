@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    include ../mixins/cardCard
+    div.cards-header-title Here's all available cards to your disposal
+    div
+        a.button.primary(href='/card/add') Create a Card
+
+    ul.card-list
+        each card in cards
+            li
+                +cardCard(card)

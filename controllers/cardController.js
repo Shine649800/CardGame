@@ -31,3 +31,39 @@ module.exports.displayCard = async function(req,res){
     );
     res.render('cards/view', {card});
 };
+
+module.exports.displayAll = async function(req, res){
+    const cards = await Card.findAll();
+    res.render('cards/viewAll', {cards});
+};
+
+module.exports.renderEditForm = async function(req,res){
+    const card = await Card.findByPk(req.params.cardId);
+    // if (!card.isOwnedBy(user)){
+    //     res.redirect('/');
+    //     return;
+    // }
+    res.render('cards/edit', {card});
+};
+
+module.exports.updateCard = async function(req, res){
+    const card = await Card.findByPk(req.params.cardId);
+    // if (!card.isOwnedBy(user)){
+    //     res.redirect('/');
+    //     return;
+    // }
+    await Card.update({
+        card_name: req.body.card_name,
+        type: req.body.type,
+        output_min: req.body.output_min,
+        output_max: req.body.output_max,
+        dices: req.body.dices,
+        die_min: req.body.die_min,
+        die_max: req.body.die_max
+    }, {
+        where: {
+            id: req.params.cardId
+        }
+    });
+    res.redirect(`/card/${req.params.cardId}`);
+}
