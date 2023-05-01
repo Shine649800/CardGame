@@ -67,3 +67,17 @@ module.exports.updateCard = async function(req, res){
     });
     res.redirect(`/card/${req.params.cardId}`);
 }
+
+module.exports.deleteCard = async function(req, res){
+    const card = await Card.findByPk(req.params.cardId);
+    // if (!user.is('admin') && !article.isOwnedBy(user)){
+    //     res.redirect('/');
+    //     return;
+    // }
+    await Card.destroy({
+        where: {
+            id: req.params.cardId
+        }
+    });
+    res.redirect('/')
+};

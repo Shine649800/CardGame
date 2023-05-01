@@ -3,4 +3,4 @@ extends ../layout
 block content
     include ../mixins/cardForm
     div.content
-        +cardForm(card, 'Update', `/card/${card.id}/edit`, `/card/${card.id}`, null)
+        +cardForm(card, 'Update', `/card/${card.id}/edit`, `/card/${card.id}`, `/card/${card.id}/delete`)

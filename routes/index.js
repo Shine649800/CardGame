@@ -16,6 +16,7 @@ router.get('/card', cardController.displayAll);
 
 router.get('/card/:cardId/edit', cardController.renderEditForm);
 router.post('/card/:cardId/edit', cardController.updateCard);
+router.get('/card/:cardId/delete', cardController.deleteCard);
 
 router.get('/createUser', userController.renderUserCreationForm);
 router.post('/createUser', userController.createUser);
