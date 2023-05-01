@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+    include ../mixins/deckDeck
+    div
+        a.button.primary(href='/deck/add') Create a Deck
+
+    ul.deck-list
+        each deck in decks
+            li
+                +deckDeck(deck)

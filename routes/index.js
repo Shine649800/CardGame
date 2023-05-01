@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const userController = require('../controllers/userController');
 const cardController = require('../controllers/cardController');
+const deckController = require('../controllers/deckController');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -17,6 +18,9 @@ router.get('/card', cardController.displayAll);
 router.get('/card/:cardId/edit', cardController.renderEditForm);
 router.post('/card/:cardId/edit', cardController.updateCard);
 router.get('/card/:cardId/delete', cardController.deleteCard);
+
+router.get('/deck/:deckId', deckController.displayDeck);
+router.get('/deck', deckController.displayAllDecks);
 
 router.get('/createUser', userController.renderUserCreationForm);
 router.post('/createUser', userController.createUser);
