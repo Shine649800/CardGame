@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         as: 'cards',
         foreignKey: 'deck_id',
         otherKey: 'card_id'
-      })
+      });
     }
   };
   Deck.init({

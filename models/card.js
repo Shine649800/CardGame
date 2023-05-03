@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         as: 'decks',
         foreignKey: 'card_id',
         otherKey: 'deck_id'
-      })
+      });
     }
   };
   Card.init({
@@ -26,8 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     output_max: DataTypes.INTEGER,
     dices: DataTypes.INTEGER,
     die_min: DataTypes.INTEGER,
-    die_max: DataTypes.INTEGER,
-    card_id: DataTypes.INTEGER
+    die_max: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Card',
