@@ -11,9 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Card.belongsTo(models.Deck, {
-        as: 'card',
-        foreignKey: 'card_id'
+      Card.belongsToMany(models.Deck, {
+        through: 'deckcards',
+        as: 'decks',
+        foreignKey: 'card_id',
+        otherKey: 'deck_id'
       })
     }
   };

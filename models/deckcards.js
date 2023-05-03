@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      DeckCards.hasMany(models.Card, {
+        as: 'card',
+        foreignKey: 'card_id'
+      });
     }
   }
   DeckCards.init({
@@ -24,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'DeckCards',
+    modelName: 'deckcards',
     tableName: 'tcg_deck_cards',
     timestamps: false
   });

@@ -1,7 +1,9 @@
-const {Deck} = require('../models');
+const {Deck, Card, DeckCards} = require('../models');
 
 module.exports.displayDeck = async function(req,res){
-    const deck = await Deck.findByPk(req.params.deckId
+    const deck = await Deck.findByPk(req.params.deckId, {
+        include: ['cards']
+    }
     );
     res.render('decks/view', {deck});
 };
