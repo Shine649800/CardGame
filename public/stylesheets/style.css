@@ -11,7 +11,7 @@ html {
 }
 
 a {
-  color: #065F46;
+  color: #000000;
   display: inline-block;
   margin-right: 24px;
   text-decoration: none;
@@ -296,7 +296,11 @@ nav {
 }
 
 .container-card {
-  max-width: 350px;
+  max-width: 1450px;
+}
+
+.container-card2 {
+  max-width: 325px;
 }
 
 .card2 {
@@ -320,3 +324,4 @@ nav {
   gap: 20px;
   flex-wrap: wrap;
 }
+

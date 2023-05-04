@@ -1,5 +1,5 @@
 mixin cardCard(card)
-    div.card
+    a.card(href=`/card/${card.id}`)
         div.info-row.id
             div.card-title=card.card_name
             div.card-type=card.type

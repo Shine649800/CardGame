@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class DeckCards extends Model {
+  class RolePermission extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,20 +13,20 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  DeckCards.init({
-    deck_id: {
-     type: DataTypes.INTEGER,
+  RolePermission.init({
+    role_id: {
+      type: DataTypes.INTEGER,
       primaryKey: true
     },
-    card_id: {
+    permission_id: {
       type: DataTypes.INTEGER,
       primaryKey: true
     }
   }, {
     sequelize,
-    modelName: 'deckcards',
-    tableName: 'tcg_deck_cards',
+    modelName: 'RolePermission',
+    tableName: 'roles_role_permissions',
     timestamps: false
   });
-  return DeckCards;
+  return RolePermission;
 };

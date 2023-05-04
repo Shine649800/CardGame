@@ -7,6 +7,6 @@ block content
             div.deck-name=deck.deck_name
 
             ul.card-list
-                each card in cards
+                each card in deck.cards
                     li
                         +cardCard(card)
