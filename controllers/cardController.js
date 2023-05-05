@@ -27,8 +27,7 @@ module.exports.addCard = async function(req,res){
 }
 
 module.exports.displayCard = async function(req,res){
-    const card = await Card.findByPk(req.params.cardId
-    );
+    const card = await Card.findByPk(req.params.cardId);
     res.render('cards/view', {card});
 };
 
@@ -39,19 +38,11 @@ module.exports.displayAll = async function(req, res){
 
 module.exports.renderEditForm = async function(req,res){
     const card = await Card.findByPk(req.params.cardId);
-    // if (!card.isOwnedBy(user)){
-    //     res.redirect('/');
-    //     return;
-    // }
     res.render('cards/edit', {card});
 };
 
 module.exports.updateCard = async function(req, res){
     const card = await Card.findByPk(req.params.cardId);
-    // if (!card.isOwnedBy(user)){
-    //     res.redirect('/');
-    //     return;
-    // }
     await Card.update({
         card_name: req.body.card_name,
         type: req.body.type,
@@ -70,10 +61,6 @@ module.exports.updateCard = async function(req, res){
 
 module.exports.deleteCard = async function(req, res){
     const card = await Card.findByPk(req.params.cardId);
-    // if (!user.is('admin') && !article.isOwnedBy(user)){
-    //     res.redirect('/');
-    //     return;
-    // }
     await Card.destroy({
         where: {
             id: req.params.cardId

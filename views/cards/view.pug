@@ -4,7 +4,8 @@ block content
     div.container-card2
         div.content
             div.description
-                a.button(href=`/card/${card.id}/edit`) Edit
+                if user && user.is('Card Creator')
+                    a.button(href=`/card/${card.id}/edit`) Edit
                 div.card
                     div.info-row.id
                         div.card-title=card.card_name
