@@ -22,9 +22,6 @@ a {
   max-width: 1400px;
   margin: 0 auto;
 }
-container.blog {
-  max-width: 1024px;
-}
 
 .content {
   box-shadow: 0 1px 3px 0 rgba(0 0 0  0.1), 0 1px 2px -1px rgba(0 0 0 0.1);
@@ -325,10 +322,67 @@ nav {
   flex-wrap: wrap;
 }
 
-.decks-header-title {
-
+.card3 {
+  border:8px solid #852698;
+  border-radius: 12px;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  font-size: 15px;
+  background-color: #bc58d7;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cards-header-title {
+.card4 {
+  border:8px solid #104913;
+  border-radius: 12px;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  font-size: 15px;
+  background-color: #52e122;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.card5 {
+  border:8px solid #343232;
+  border-radius: 12px;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  font-size: 15px;
+  background-color: #9d9898;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-content {
+  box-shadow: 0 1px 3px 0 rgba(0 0 0 0.1), 0 1px 2px -1px rgba(0 0 0 0.1);
+  background: white;
+  padding: 50px;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.title {
+  color: #065F46;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container-menu {
+  max-width: 1450px;
 }

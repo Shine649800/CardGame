@@ -13,8 +13,8 @@ function redirectGuests(req,res,next){
 }
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.redirect('/login');
+router.get('/', function redirectGuests(req, res, next) {
+  res.render('index');
 });
 
 router.get('/card/add', redirectGuests, cardController.renderAddForm);
