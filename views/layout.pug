@@ -7,13 +7,13 @@ html
     nav
       div.container
         ul.nav.justify-content-end.main-nav
+          li.nav-item
+            a.nav-link(href="/") Home
           if user
             li.nav-item
               a.nav-link(href="#") Hello #{user.user_name}
             li.nav-item
               a.nav-link(href="/logout") Logout
-            li.nav-item
-              a.nav-link(href="/") Home
             li.nav-item
               a.nav-link(href="/deck") Decks
             li.nav-item
