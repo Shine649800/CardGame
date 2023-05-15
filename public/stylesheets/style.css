@@ -379,10 +379,54 @@ nav {
 
 .title {
   color: #065F46;
-  font-size: 20px;
   font-weight: bold;
+  font-size: 40px;
+  text-align: center;
 }
 
 .container-menu {
   max-width: 1450px;
+}
+
+.card6 {
+  border:8px solid #560505;
+  border-radius: 12px;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  font-size: 20px;
+  background-color: #830a0a;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.stage-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 250px;
+}
+
+.stages-header-title {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+.cards-header-title {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+.decks-header-title {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
 }

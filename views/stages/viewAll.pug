@@ -1,3 +1,10 @@
 extends ../layout
 
 block content
+    include ../mixins/stageCard
+    div.stages-header-title Choose a location for this endeavor
+
+        ul.stage-list
+            each stage in stages
+                li
+                    +stageCard(stage)

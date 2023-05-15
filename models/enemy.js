@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Enemy.init({
     enemy_name: DataTypes.STRING,
-    health_points: DataTypes.INTEGER
+    health_points: DataTypes.INTEGER,
+    stage_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Enemy',

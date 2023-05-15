@@ -23,7 +23,7 @@ module.exports.addCard = async function(req,res){
         die_min: req.body.die_min,
         die_max: req.body.die_max
     });
-    res.redirect('/')
+    res.redirect('/card')
 }
 
 module.exports.displayCard = async function(req,res){
