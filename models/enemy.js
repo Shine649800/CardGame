@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Enemy.init({
     enemy_name: DataTypes.STRING,
     health_points: DataTypes.INTEGER,
+    image: DataTypes.STRING,
     stage_id: DataTypes.INTEGER
   }, {
     sequelize,

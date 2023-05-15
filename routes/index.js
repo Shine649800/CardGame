@@ -34,6 +34,8 @@ router.get('/deck', redirectGuests, deckController.displayAllDecks);
 
 router.get('/stages', redirectGuests, stageController.displayAllStages);
 
+router.get('/gaming', redirectGuests, gameController.renderGame);
+
 router.get('/createUser', userController.renderUserCreationForm);
 router.post('/createUser', userController.createUser);
 
