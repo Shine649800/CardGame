@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    include ./mixins/enemyCard
+    div.container-card
+        div.content
+            div.enemy-name=stage.enemy_name
+
+            ul.enemy-list
+                each enemy in stage
+                    li
+                        +enemyCard(enemy)

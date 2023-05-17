@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Stage.hasMany(models.Enemy, {
         foreignKey: 'stage_id',
-        as: 'enemies'
+        as: 'enemy'
       })
     }
   }

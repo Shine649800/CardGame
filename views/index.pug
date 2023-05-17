@@ -4,11 +4,11 @@ block content
   div.title Welcome to CapStone
     div.container-menu
       div.menu-content
-        a.card3(href='/deck') View Decks
-
-        a.card4(href='/card') View Cards
-
         if user
+          a.card3(href='/deck') View Decks
+
+          a.card4(href='/card') View Cards
+
           a.card5(href='/stages') Play
         else
-          a.card5(href='/login') Login
+          a.logincard(href='/login') Login

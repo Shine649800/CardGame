@@ -1,9 +1,12 @@
-const {Deck, Card, Enemy, EnemyCards} = require('../models');
+const {Deck, Card, Enemy, EnemyCards, Stage} = require('../models');
 const currentDeck = [];
 const enemy = [];
 const enemyCards =[];
 
-module.exports.renderGame = async function(){
-    const enemy = await Enemy.findByPk(req.params.enemyId,);
-    res.render('enemies/view', {enemy});
+module.exports.renderGame = async function(req,res){
+    const stage = await Stage.findByPk(req.params.stageId, {
+        include: ['enemy']
+    }
+    );
+    res.render('game', {stage});
 }
