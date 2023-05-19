@@ -17,13 +17,18 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'enemy_id',
         otherKey: 'card_id'
       });
+      Enemy.belongsToMany(models.Stage, {
+        through: 'StageEnemies',
+        as: 'stage',
+        foreignKey: 'enemy_id',
+        otherKey: 'stage_id'
+      });
     }
   }
   Enemy.init({
     enemy_name: DataTypes.STRING,
     health_points: DataTypes.INTEGER,
-    image: DataTypes.STRING,
-    stage_id: DataTypes.INTEGER
+    image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Enemy',

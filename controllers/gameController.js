@@ -1,4 +1,4 @@
-const {Deck, Card, Enemy, EnemyCards, Stage} = require('../models');
+const {Deck, Card, Enemy, EnemyCards, Stage, StageEnemies} = require('../models');
 const currentDeck = [];
 const enemy = [];
 const enemyCards =[];
