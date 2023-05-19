@@ -14,8 +14,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   EnemyPlayCards.init({
-    card_id: DataTypes.INTEGER,
-    enemy_id: DataTypes.INTEGER
+    card_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
+    enemy_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    }
   }, {
     sequelize,
     modelName: 'EnemyPlayCards',
