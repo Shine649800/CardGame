@@ -1,5 +1,8 @@
 mixin enemyCard(enemy)
     div.enemyCard
-        div.enemy-name=enemy.enemy_name
-        div.enemy-health=enemy.health_points
-        img.enemy-image(src=enemy.image)
+        div.info-row.id
+            div.enemy-name=enemy.enemy_name
+            div.enemy-health=enemy.health_points
+        div.line
+        div.image
+            img.enemy-image(src=enemy.image)
