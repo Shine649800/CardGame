@@ -1,3 +1,6 @@
 extends ../layout
 
 block content
+    include ../mixins/deckForm
+        div.content
+            +deckForm(deck, 'Create', '/deck/add', '/', null)

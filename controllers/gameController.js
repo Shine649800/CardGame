@@ -9,8 +9,8 @@ module.exports.renderGame = async function(req,res){
         }
     );
     let currentDeck = [];
-    let enemyCards =[];
-    await EnemyCards.findByPk(req.params.enemyId);
+    let enemyCards = [];
+    await EnemyCards.findByPk(req.params.stageId);
     enemyCards.push(EnemyCards);
     res.render('game', {stage, enemyCards});
 }

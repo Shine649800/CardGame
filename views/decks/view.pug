@@ -4,6 +4,8 @@ block content
     include ../mixins/cardCard
     div.container-card
         div.content
+            if user && user.is('Deck Manager')
+                a.button(href=`/deck/${deck.id}/edit`) Edit
             div.deck-name=deck.deck_name
 
             ul.card-list

@@ -1,3 +1,6 @@
 extends ../layout
 
 block content
+    include ../mixins/deckForm
+    div.content
+        +deckForm(deck, 'Update', `/deck/${deck.id}/edit`, `/deck/${deck.id}`, `/deck/${deck.id}/delete`)
