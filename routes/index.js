@@ -29,6 +29,13 @@ router.get('/card/:cardId/edit', redirectGuests, cardController.renderEditForm);
 router.post('/card/:cardId/edit', redirectGuests, cardController.updateCard);
 router.get('/card/:cardId/delete', redirectGuests, cardController.deleteCard);
 
+router.get('/deck/:deckId/edit', redirectGuests, deckController.renderEditForm);
+router.post('/deck/:deckId/edit', redirectGuests, deckController.updateDeck);
+router.get('/deck/:deckId/delete', redirectGuests, deckController.deleteDeck);
+
+router.get('/deck/add', redirectGuests, deckController.renderAddForm);
+router.post('/deck/add', deckController.addDeck);
+
 router.get('/deck/:deckId', redirectGuests, deckController.displayDeck);
 router.get('/deck', redirectGuests, deckController.displayAllDecks);
 
